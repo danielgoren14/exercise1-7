@@ -1,4 +1,4 @@
-public class narcissistic_number {
+public class exercise7 {
     public static void main(String[] args) {
         int digit = 1;
         int dividedNumber;

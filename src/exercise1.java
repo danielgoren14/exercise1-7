@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class quadratic_equation {
+public class exercise1{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the coefficient of the first variable in the quadratic equation");
