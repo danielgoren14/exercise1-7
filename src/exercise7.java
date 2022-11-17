@@ -1,39 +1,34 @@
-public class exercise7 {
-    public static void main(String[] args) {
-        int digit = 1;
-        int dividedNumber;
-        int sumAfterPow;
-        int finalSum;
-        for(int x = 1;x<=9;x++){
-            System.out.println("The number "+ x +" is a narcissistic number");
-        }
-        for(int i = 10;i<100;i++){
-            dividedNumber = i;
-            digit = 1;
-            finalSum =0;
-            while(digit>0 || dividedNumber > 0){
-                digit = dividedNumber % 10;
-                sumAfterPow = digit * digit;
-                finalSum += sumAfterPow;
-                dividedNumber = dividedNumber / 10;
 
-            }
-            if(finalSum == i){
-                System.out.println("The number "+ i +" is a narcissistic nubmer");
-            }
+public class exercise7
+{
+    public static void main(String[]args) {
+        int sum;
+        int firstDigit;
+        int secondDigit;
+        int thirdDigit = 0;
+        int fourthDigit = 0;
+        int checkedNumber;
+
+        for (int i = 1; i <= 9; i++){
+            System.out.print(i + "\t");
         }
-        for(int j = 100; j<1000; j++){
-            dividedNumber = j;
-            digit = 1;
-            finalSum =0;
-            while(digit>0 || dividedNumber > 0){
-                digit = dividedNumber % 10;
-                sumAfterPow = digit * digit * digit;
-                finalSum += sumAfterPow;
-                dividedNumber = dividedNumber / 10;
+
+
+        for (int i = 10; i <= 1000; i++) {
+            checkedNumber = i;
+            firstDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
+            checkedNumber /= 10;
+            secondDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
+            checkedNumber /= 10;
+            if(i >= 100 && i <=999){
+                thirdDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
+                if(i == 1000) {
+                    fourthDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
+                }
             }
-            if(finalSum == j){
-                System.out.println("The number "+ j +" is a narcissistic nubmer");
+            sum = firstDigit + secondDigit + thirdDigit + fourthDigit;
+            if (sum == i) {
+                System.out.print(i + "\t");
             }
         }
     }
