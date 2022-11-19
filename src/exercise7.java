@@ -10,7 +10,7 @@ public class exercise7
         int checkedNumber;
 
         for (int i = 1; i <= 9; i++){
-            System.out.print(i + "\t");
+            System.out.print(i + " ");
         }
 
 
@@ -28,7 +28,7 @@ public class exercise7
                 }
             sum = firstDigit + secondDigit + thirdDigit + fourthDigit;
             if (sum == i) {
-                System.out.print(i + "\t");
+                System.out.print(i + " ");
             }
         }
     }
