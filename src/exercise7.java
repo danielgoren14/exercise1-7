@@ -21,10 +21,10 @@ public class exercise7
             secondDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
             checkedNumber /= 10;
             if(i >= 100 && i <=999){
-                thirdDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10)); 
-                checkedNumber /= 10;
+                thirdDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
             }
             if(i == 1000) {
+                    checkedNumber /= 10;
                     fourthDigit = ((checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10) * (checkedNumber % 10));
                 }
             sum = firstDigit + secondDigit + thirdDigit + fourthDigit;
